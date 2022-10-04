@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+h2 {
+  color: #b6241f;
+  font-weight: 300;
+  letter-spacing: 8px;
+}
+
+h3 {
+  color: #b6241f;
+  font-weight: 300;
+}
+
+h4 {
+  color: #b6241f;
+  font-weight: 300;
+}
+
+body {
+  background-color: #cecece;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.752);
+  height: 150px;
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: lighter;
+}
+.nav-link:hover {
+  color: #b6241f;
+}
+.nav-link:active {
+  color: #b6241f;
+}
+.nav-link:focus {
+  color: #b6241f;
+}
+
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.752);
+}
+.dropdown-menu .dropdown-item {
+  color: #fff;
+  font-weight: lighter;
+}
+
+#carouselExampleSlidesOnly {
+  margin-top: 150px;
+}
+
+#textoInformativo {
+  background-color: #cecece;
+}
+
+.avances h2 {
+  border-top: 1px solid #b6241f;
+  padding-top: 50px;
+}
+
+.superpuesta {
+  margin-left: -100px;
+}
+
+.cajaTexto {
+  color: #fff;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(182, 36, 31, 0.737254902);
+  padding: 10px;
+}
+
+footer {
+  border-top: 1px solid #b6241f;
+}
+footer i {
+  font-size: 30px;
+  color: #b6241f;
+  margin: 10px;
+}
+
+/*# sourceMappingURL=estilos.css.map */
