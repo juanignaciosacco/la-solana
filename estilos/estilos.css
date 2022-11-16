@@ -4,6 +4,10 @@
   font-size: 20px;
 }
 
+h1 {
+  color: #b6241f;
+}
+
 h2 {
   color: #b6241f;
   font-weight: 300;
@@ -50,17 +54,51 @@ nav {
   color: #fff;
   font-weight: lighter;
 }
+.dropdown-menu .dropdown-item:hover {
+  color: #b6241f;
+}
 
 #carouselExampleSlidesOnly {
   margin-top: 150px;
 }
 
-#textoInformativo {
+.textoInformativo {
   background-color: #cecece;
+  margin: 2em auto;
+  padding-top: 20px;
+  text-align: center;
+  width: 80%;
+  height: 320px;
+}
+
+.linea {
+  position: relative;
+  z-index: 1;
+}
+.linea span {
+  background: #cecece;
+  padding: 0 15px;
+  font-size: 2rem;
+  letter-spacing: 8px;
+  font-weight: 300;
+}
+.linea::before {
+  border-top: 1px solid #b6241f;
+  content: " ";
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 95%;
+  z-index: -1;
 }
 
 .avances h2 {
   border-top: 1px solid #b6241f;
+  width: 50%;
+  margin: 0 auto;
   padding-top: 50px;
 }
 
@@ -74,6 +112,68 @@ nav {
   height: 80%;
   background-color: rgba(182, 36, 31, 0.737254902);
   padding: 10px;
+}
+
+/* Comienza pagina historia */
+main#historia {
+  margin-top: 200px;
+}
+
+.imgIzq {
+  padding: 10px;
+  width: 100%;
+  border-top: 2px solid #b6241f;
+  border-left: 2px solid #b6241f;
+}
+
+.imgDer {
+  padding: 10px;
+  width: 100%;
+  border-top: 2px solid #b6241f;
+  border-right: 2px solid #b6241f;
+}
+
+.img {
+  padding: 10px;
+  width: 100%;
+}
+
+.imagesHistoria {
+  background-color: rgba(182, 36, 31, 0.737254902);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.texto {
+  color: #fff;
+  width: 45%;
+  background-color: rgba(182, 36, 31, 0.737254902);
+  padding: 20px;
+  margin: auto;
+}
+
+/* Comienza pagina Contacto */
+#contacto {
+  margin-top: 200px;
+}
+
+fieldset {
+  border: 2px solid #b6241f;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+fieldset input, fieldset textarea {
+  width: 80%;
+  margin: 5px auto;
+}
+fieldset input[type=submit], fieldset textarea[type=submit] {
+  width: 30%;
+}
+
+iframe {
+  margin-top: 50px;
 }
 
 footer {
