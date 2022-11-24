@@ -188,8 +188,81 @@ fieldset {
     }
 }
 
+
 iframe {
+    margin: auto;
+}
+
+.contMapa {
+    align-self: center;
+}
+
+/* Comienza pagina La Casa */
+
+.portada {
+    margin-top: 220px;
+    img {
+        margin-top: 70px;
+        width: 100%;
+    }
+}
+
+.imgLaCasa {
+    width: 500px;
+    margin: auto;
+}
+
+.borde {
+    border-bottom: 2px solid $colorRojo;
+    border-top: 2px solid $colorRojo;
+
+}
+
+/* Comienza pagina Suite Sunset */
+
+#suiteSunset {
+    margin-top: 200px;
+}
+
+.list {
+    width: 60%;
+    margin: auto;
+}
+
+.listItem {
+    background-color: $colorGrisClaro;
+    border-bottom: 1px solid $colorRojo;
+    border-radius: 4px;
+    height: 60px;
+    line-height: 60px;
+    &:hover {
+        background-color: $colorRojoTransparente;
+    }
+}
+
+.galeria {
     margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 20px;
+}
+
+.img1sunset {
+    width: 600px;
+}
+
+.img2sunset {
+    width: 600px;
+}
+
+.img3sunset {
+    width: 600px;
+}
+
+.img4sunset {
+    width: 600px;
 }
 
 footer {
