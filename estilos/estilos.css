@@ -205,16 +205,12 @@ iframe {
 }
 
 .list {
-  width: 60%;
   margin: auto;
 }
 
 .listItem {
   background-color: #cecece;
-  border-bottom: 1px solid #b6241f;
-  border-radius: 4px;
-  height: 60px;
-  line-height: 60px;
+  line-height: 40px;
 }
 .listItem:hover {
   background-color: rgba(182, 36, 31, 0.737254902);
