@@ -29,13 +29,13 @@ body {
 }
 
 nav {
-  background-color: rgba(0, 0, 0, 0.752);
-  height: 150px;
+  background-color: rgba(0, 0, 0, 0.822);
+  min-height: 150px;
 }
 
 .nav-link {
   color: #fff;
-  font-weight: lighter;
+  font-weight: light;
 }
 .nav-link:hover {
   color: #b6241f;
@@ -56,6 +56,18 @@ nav {
 }
 .dropdown-menu .dropdown-item:hover {
   color: #b6241f;
+}
+
+i.i {
+  font-size: 25px;
+  color: #cecece;
+}
+
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
 }
 
 #carouselExampleSlidesOnly {
@@ -248,6 +260,21 @@ footer i {
   font-size: 30px;
   color: #b6241f;
   margin: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+  nav {
+    text-align: center;
+  }
+  nav ul li:hover {
+    background-color: #b6241f;
+  }
+  .texto {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

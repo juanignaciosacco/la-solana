@@ -42,13 +42,13 @@ body {
 }
 
 nav {
-    background-color: rgba(0, 0, 0, 0.752);
-    height: 150px;
+    background-color: rgba(0, 0, 0, 0.822);
+    min-height: 150px;
 }
 
 .nav-link {
     color: #fff;
-    font-weight: lighter;
+    font-weight: light;
     &:hover {
         color: $colorRojo;
     }
@@ -71,7 +71,19 @@ nav {
     }
 }
 
-#carouselExampleSlidesOnly{
+i.i {
+    font-size: 25px;
+    color: $colorGrisClaro;
+}
+
+.navbar-toggler {
+    border: none;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+#carouselExampleSlidesOnly {
     margin-top: 150px;
 }
 
@@ -268,5 +280,26 @@ footer {
         font-size: 30px;
         color: $colorRojo;
         margin: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    nav {
+        text-align: center;
+        ul {
+            li {
+                &:hover {
+                    background-color: $colorRojo;
+                }
+            }
+        }
+    }
+
+    .texto {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
 }
