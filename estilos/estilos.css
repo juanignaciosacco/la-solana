@@ -36,15 +36,19 @@ nav {
 .nav-link {
   color: #fff;
   font-weight: light;
+  border-radius: 5px;
 }
 .nav-link:hover {
   color: #b6241f;
+  background-color: #cecece;
 }
 .nav-link:active {
   color: #b6241f;
+  background-color: #cecece;
 }
 .nav-link:focus {
   color: #b6241f;
+  background-color: #cecece;
 }
 
 .dropdown-menu {
@@ -56,6 +60,15 @@ nav {
 }
 .dropdown-menu .dropdown-item:hover {
   color: #b6241f;
+  background-color: #cecece;
+}
+.dropdown-menu .dropdown-item:active {
+  color: #b6241f;
+  background-color: #cecece;
+}
+.dropdown-menu .dropdown-item:focus {
+  color: #b6241f;
+  background-color: #cecece;
 }
 
 i.i {
@@ -107,23 +120,54 @@ i.i {
   z-index: -1;
 }
 
-.avances h2 {
-  border-top: 1px solid #b6241f;
+.carouselImg {
   width: 50%;
-  margin: 0 auto;
-  padding-top: 50px;
+  height: 700px;
+  overflow: hidden;
+  position: relative;
+}
+.carouselImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+.carouselImg img.active {
+  opacity: 1;
 }
 
-.superpuesta {
-  margin-left: -100px;
+.avance {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .cajaTexto {
+  position: relative;
+  right: 75px;
   color: #fff;
-  width: 80%;
+  width: 45%;
   height: 80%;
   background-color: rgba(182, 36, 31, 0.737254902);
-  padding: 10px;
+  padding: 20px;
+}
+
+.superpuesta {
+  margin-left: -80px;
+  z-index: 1001;
+}
+
+.carou {
+  margin-left: 40px;
+  min-height: 605px;
+}
+
+.imgCar {
+  width: 100%;
 }
 
 /* Comienza pagina historia */
@@ -191,6 +235,10 @@ iframe {
 .contMapa {
   align-self: center;
 }
+.contMapa iframe {
+  width: 600px;
+  height: 450px;
+}
 
 /* Comienza pagina La Casa */
 .portada {
@@ -201,14 +249,45 @@ iframe {
   width: 100%;
 }
 
+.portadaCasa {
+  overflow: hidden;
+}
+
 .imgLaCasa {
   width: 500px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .borde {
   border-bottom: 2px solid #b6241f;
   border-top: 2px solid #b6241f;
+}
+
+/* Comienza pagina Eventos */
+.contLista {
+  width: 500px;
+  margin: 50px auto;
+  z-index: 1;
+}
+.contLista ul {
+  list-style: inside;
+}
+.contLista ul li {
+  margin-top: 20px;
+}
+
+.carouselImgEventos {
+  margin: 0 auto;
+  height: 800px;
+  width: 90%;
+  overflow: hidden;
+}
+.carouselImgEventos img {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
 }
 
 /* Comienza pagina Suite Sunset */
@@ -262,6 +341,171 @@ footer i {
   margin: 10px;
 }
 
+@media only screen and (max-width: 576px) {
+  * {
+    font-size: 16px;
+  }
+  .logo {
+    width: 280px;
+  }
+  .linea span {
+    letter-spacing: none;
+    text-align: center;
+  }
+  .linea::before {
+    display: none;
+  }
+  .textoInformativo {
+    height: auto;
+  }
+  .cajaTexto {
+    position: static;
+    width: auto;
+  }
+  .carouselImg {
+    width: 100%;
+    height: 300px;
+  }
+  /* Pagina la casa */
+  .imgLaCasa {
+    width: 350px;
+  }
+  /* Pagina eventos */
+  .contLista {
+    width: 350px;
+    margin: 0 auto;
+  }
+  .carouselImgEventos {
+    width: 90%;
+    height: 200px;
+  }
+  .contactoEventos .txtEventos {
+    font-size: 16px;
+    text-align: center;
+  }
+  .contactoEventos .txtEventos i {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  /* Pagina historia */
+  .texto {
+    text-align: center;
+  }
+  /* Pagina contacto */
+  fieldset input[type=submit], fieldset textarea[type=submit] {
+    width: 60%;
+  }
+  .contMapa {
+    align-self: center;
+  }
+  .contMapa iframe {
+    width: 350px;
+    height: 500px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  * {
+    font-size: 18px;
+  }
+  .logo {
+    width: 300px;
+  }
+  .linea span {
+    letter-spacing: none;
+    text-align: center;
+  }
+  .linea::before {
+    display: none;
+  }
+  .textoInformativo {
+    height: auto;
+  }
+  .cajaTexto {
+    position: static;
+    width: auto;
+  }
+  .carouselImg {
+    width: 100%;
+    height: 300px;
+  }
+  /* Pagina la casa */
+  .imgLaCasa {
+    width: 100%;
+  }
+  /* Pagina historia */
+  .texto {
+    text-align: center;
+  }
+  /* Pagina eventos */
+  .contLista {
+    width: 350px;
+    margin: 0 auto;
+  }
+  .carouselImgEventos {
+    width: 90%;
+    height: 400px;
+  }
+  .contactoEventos .txtEventos {
+    font-size: 16px;
+    text-align: center;
+  }
+  .contactoEventos .txtEventos i {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  /* Pagina contacto */
+  fieldset input[type=submit], fieldset textarea[type=submit] {
+    width: 60%;
+  }
+  .contMapa {
+    align-self: center;
+  }
+  .contMapa iframe {
+    width: 400px;
+    height: 500px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .logo {
+    width: 400px;
+  }
+  .textoInformativo {
+    height: auto;
+  }
+  .cajaTexto {
+    position: static;
+    width: auto;
+    margin-top: 20px;
+  }
+  .carouselImg {
+    width: 100%;
+    height: 600px;
+  }
+  /* Pagina la casa */
+  .imgLaCasa {
+    width: 100%;
+  }
+  .carouselImgEventos {
+    width: 90%;
+    height: 600px;
+  }
+  /* Pagina eventos */
+  .contLista {
+    text-align: center;
+    margin: 20px auto;
+  }
+  /* Pagina contacto */
+  fieldset input[type=submit], fieldset textarea[type=submit] {
+    width: 60%;
+  }
+  .contMapa {
+    align-self: center;
+  }
+  .contMapa iframe {
+    width: 700px;
+    height: 700px;
+  }
+}
 @media only screen and (max-width: 1200px) {
   nav {
     text-align: center;
@@ -274,6 +518,46 @@ footer i {
     margin: auto;
     margin-bottom: 10px;
     margin-top: 10px;
+  }
+  .cajaTexto {
+    position: relative;
+    right: 50px;
+    color: #fff;
+    width: 40%;
+    height: 80%;
+    background-color: rgba(182, 36, 31, 0.737254902);
+    padding: 20px;
+  }
+  .carouselImg {
+    width: 58%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+  }
+  .carouselImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    margin-left: 10px;
+  }
+  .carouselImg img.active {
+    opacity: 1;
+  }
+  /* Comeinza La casa */
+  .imgLaCasa {
+    width: 100%;
+    margin: 0 auto;
+  }
+  /* Comeinza pagina Contacto */
+  .contMapa {
+    align-self: center;
+  }
+  .contMapa iframe {
+    width: 900px;
+    height: 700px;
   }
 }
 

@@ -33,6 +33,7 @@ h3 {
     color: $colorRojo;
     font-weight: 300;
 }
+
 h4 {
     color: $colorRojo;
     font-weight: 300;
@@ -49,14 +50,18 @@ nav {
 .nav-link {
     color: #fff;
     font-weight: light;
+    border-radius: 5px;
     &:hover {
         color: $colorRojo;
+        background-color: $colorGrisClaro;
     }
     &:active {
         color: $colorRojo;
+        background-color: $colorGrisClaro;
     }
     &:focus {
         color: $colorRojo;
+        background-color: $colorGrisClaro;
     }
 }
 
@@ -67,6 +72,15 @@ nav {
         font-weight: lighter;
         &:hover {
             color: $colorRojo;
+            background-color: $colorGrisClaro;
+        }
+        &:active {
+            color: $colorRojo;
+            background-color: $colorGrisClaro;
+        }
+        &:focus {
+            color: $colorRojo;
+            background-color: $colorGrisClaro;
         }
     }
 }
@@ -121,29 +135,62 @@ i.i {
         z-index: -1;
     }
 }
-.avances {
-    h2 {
-        border-top: 1px solid $colorRojo;
-        width: 50%;
-        margin: 0 auto;
-        padding-top: 50px;
+
+.carouselImg {
+    width: 50%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: absolute;
+      transition: opacity 0.5s ease;
+      opacity: 0;
+  
+      &.active {
+        opacity: 1;
+      }
     }
-}
-.superpuesta {
-    margin-left: -100px;
+  }
+
+.avance {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .cajaTexto {
+    position: relative;
+    right: 75px;
     color: #fff;
-    width: 80%;
+    width: 45%;
     height: 80%;
     background-color: $colorRojoTransparente;
-    padding: 10px;
+    padding: 20px;
 }
+
+.superpuesta {
+    margin-left: -80px;
+    z-index: 1001;
+}
+
+.carou {
+    margin-left: 40px;
+    min-height: 605px;
+}
+
+.imgCar {
+    width: 100%;
+}
+
 /* Comienza pagina historia */
 
 main#historia {
-        margin-top: 200px;
+    margin-top: 200px;
 }
 
 .imgIzq {
@@ -161,6 +208,7 @@ main#historia {
 .img {
     @include imgPW();
 }
+
 
 .imagesHistoria {
     background-color: $colorRojoTransparente;
@@ -200,13 +248,16 @@ fieldset {
     }
 }
 
-
 iframe {
     margin: auto;
 }
 
 .contMapa {
     align-self: center;
+    iframe {
+        width: 600px; 
+        height: 450px;
+    }
 }
 
 /* Comienza pagina La Casa */
@@ -219,9 +270,13 @@ iframe {
     }
 }
 
+.portadaCasa {
+    overflow: hidden;
+}
+
 .imgLaCasa {
     width: 500px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .borde {
@@ -230,6 +285,35 @@ iframe {
 
 }
 
+/* Comienza pagina Eventos */
+
+.contLista {
+    width: 500px;
+    margin: 50px auto;
+    z-index: 1;
+    ul {
+        list-style: inside;
+        li {
+            margin-top: 20px;
+        }
+    }
+}
+
+.carouselImgEventos {
+    margin: 0 auto;
+    height: 800px;
+    width: 90%;
+    overflow: hidden;
+    img {
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.5s ease;
+    }
+  }
+
+
 /* Comienza pagina Suite Sunset */
 
 #suiteSunset {
@@ -237,7 +321,6 @@ iframe {
 }
 
 .list {
-    // width: 60%;
     margin: auto;
 }
 
@@ -283,8 +366,239 @@ footer {
     }
 }
 
+@media only screen and (max-width: 576px) {
+
+    * {
+        font-size: 16px;
+    }
+
+    .logo {
+        width: 280px;
+    }
+
+    .linea {
+        span {
+            letter-spacing: none;
+            text-align: center;
+        }
+        &::before{
+            display: none;
+        }
+    }
+
+    .textoInformativo {
+        height: auto;
+    }
+
+    .cajaTexto {
+        position: static;
+        width: auto;
+    }
+
+    .carouselImg {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* Pagina la casa */
+    
+    .imgLaCasa {
+        width: 350px;
+    }
+    
+    /* Pagina eventos */
+    
+    .contLista {
+        width: 350px;
+        margin: 0 auto;
+    }
+    
+    .carouselImgEventos {
+        width: 90%;
+        height: 200px;
+    }
+    
+    .contactoEventos {
+        .txtEventos {
+            font-size: 16px;
+            text-align: center;
+            i {
+                font-size: 16px;
+                margin-right: 10px;
+            }
+        }
+    }
+    
+    /* Pagina historia */
+    
+    .texto {
+        text-align: center;
+    }
+    
+    /* Pagina contacto */
+    
+    fieldset {
+        input[type="submit"] {
+            width: 60%;
+        }
+    }
+    
+    .contMapa {
+        align-self: center;
+        iframe {
+            width: 350px;
+            height: 500px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    * {
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 300px;
+    }
+
+    .linea {
+        span {
+            letter-spacing: none;
+            text-align: center;
+        }
+        &::before{
+            display: none;
+        }
+    }
+
+    .textoInformativo {
+        height: auto;
+    }
+
+    .cajaTexto {
+        position: static;
+        width: auto;
+    }
+
+    .carouselImg {
+        width: 100%;
+        height: 300px;
+    }
+
+     /* Pagina la casa */
+    
+     .imgLaCasa {
+        width: 100%;
+    }
+
+    /* Pagina historia */
+
+    .texto {
+        text-align: center;
+    }
+
+    /* Pagina eventos */
+
+    .contLista {
+        width: 350px;
+        margin: 0 auto;
+    }
+    
+    .carouselImgEventos {
+        width: 90%;
+        height: 400px;
+    }
+    
+    .contactoEventos {
+        .txtEventos {
+            font-size: 16px;
+            text-align: center;
+            i {
+                font-size: 16px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    /* Pagina contacto */
+
+    fieldset {
+        input[type="submit"] {
+            width: 60%;
+        }
+    }
+    
+    .contMapa {
+        align-self: center;
+        iframe {
+            width: 400px;
+            height: 500px;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 992px) {
+
+    .logo {
+        width: 400px;
+    }
+
+    .textoInformativo {
+        height: auto;
+    }
+
+    .cajaTexto {
+        position: static;
+        width: auto;
+        margin-top: 20px;
+    }
+
+    .carouselImg {
+        width: 100%;
+        height: 600px;
+    }
+
+    /* Pagina la casa */
+
+    .imgLaCasa {
+        width: 100%;
+    }
+
+    .carouselImgEventos {
+        width: 90%;
+        height: 600px;
+    }
+
+    /* Pagina eventos */
+
+    .contLista {
+        text-align: center;
+        // width: 500px;
+        margin: 20px auto;
+    }
+
+    /* Pagina contacto */
+
+    fieldset {
+        input[type="submit"] {
+            width: 60%;
+        }
+    }
+    
+    .contMapa {
+        align-self: center;
+        iframe {
+            width: 700px;
+            height: 700px;
+        }
+    }
+}
+
 
 @media only screen and (max-width: 1200px) {
+
     nav {
         text-align: center;
         ul {
@@ -301,5 +615,52 @@ footer {
         margin: auto;
         margin-bottom: 10px;
         margin-top: 10px;
+    }
+
+    .cajaTexto {
+        position: relative;
+        right: 50px;
+        color: #fff;
+        width: 40%;
+        height: 80%;
+        background-color: $colorRojoTransparente;
+        padding: 20px;
+    }
+
+    .carouselImg {
+        width: 58%;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          position: absolute;
+          transition: opacity 0.5s ease;
+          opacity: 0;
+          margin-left: 10px;
+      
+          &.active {
+            opacity: 1;
+          }
+        }
+      }
+
+      /* Comeinza La casa */
+
+      .imgLaCasa {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Comeinza pagina Contacto */
+
+    .contMapa {
+        align-self: center;
+        iframe {
+            width: 900px;
+            height: 700px;
+        }
     }
 }
