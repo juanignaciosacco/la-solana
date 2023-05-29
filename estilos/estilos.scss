@@ -390,32 +390,44 @@ footer {
         height: auto;
     }
 
+    .avance {
+        display: flex;
+        flex-direction: column;
+    }
+
     .cajaTexto {
         position: static;
-        width: auto;
+        width: 80%;
+        height: auto;
     }
 
     .carouselImg {
-        width: 100%;
+        width: 80%;
         height: 300px;
     }
 
     /* Pagina la casa */
     
     .imgLaCasa {
-        width: 350px;
+        width: 100%;
     }
     
     /* Pagina eventos */
     
     .contLista {
-        width: 350px;
+        width: auto;
+        text-align: center;
         margin: 0 auto;
     }
     
     .carouselImgEventos {
+        width: 100%;
+        height: 400px;
+    }
+
+    .txtInfoEventos {
         width: 90%;
-        height: 200px;
+        margin: 0 auto;
     }
     
     .contactoEventos {
@@ -433,6 +445,7 @@ footer {
     
     .texto {
         text-align: center;
+        width: 80%;
     }
     
     /* Pagina contacto */
@@ -446,13 +459,13 @@ footer {
     .contMapa {
         align-self: center;
         iframe {
-            width: 350px;
+            width: 90%;
             height: 500px;
         }
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 577px) and (max-width: 768px) {
 
     * {
         font-size: 18px;
@@ -476,6 +489,12 @@ footer {
         height: auto;
     }
 
+    .avance {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
     .cajaTexto {
         position: static;
         width: auto;
@@ -483,7 +502,7 @@ footer {
 
     .carouselImg {
         width: 100%;
-        height: 300px;
+        height: 500px;
     }
 
      /* Pagina la casa */
@@ -496,9 +515,15 @@ footer {
 
     .texto {
         text-align: center;
+        width: 80%;
     }
 
     /* Pagina eventos */
+
+    .txtInfoEventos {
+        width: 90%;
+        margin: 0 auto;
+    }
 
     .contLista {
         width: 350px;
@@ -507,7 +532,7 @@ footer {
     
     .carouselImgEventos {
         width: 90%;
-        height: 400px;
+        height: 500px;
     }
     
     .contactoEventos {
@@ -532,14 +557,14 @@ footer {
     .contMapa {
         align-self: center;
         iframe {
-            width: 400px;
+            width: 90%;
             height: 500px;
         }
     }
     
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 769px) and (max-width: 992px) {
 
     .logo {
         width: 400px;
@@ -551,7 +576,7 @@ footer {
 
     .cajaTexto {
         position: static;
-        width: auto;
+        width: 90%;
         margin-top: 20px;
     }
 
@@ -571,11 +596,16 @@ footer {
         height: 600px;
     }
 
+    /* Pagina historia */
+
+    .texto {
+        text-align: center;
+        width: 80%;
+    }
+
     /* Pagina eventos */
 
     .contLista {
-        text-align: center;
-        // width: 500px;
         margin: 20px auto;
     }
 
@@ -590,14 +620,14 @@ footer {
     .contMapa {
         align-self: center;
         iframe {
-            width: 700px;
+            width: 80%;
             height: 700px;
         }
     }
 }
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
 
     nav {
         text-align: center;
@@ -611,8 +641,6 @@ footer {
     }
 
     .texto {
-        width: 90%;
-        margin: auto;
         margin-bottom: 10px;
         margin-top: 10px;
     }
@@ -659,8 +687,7 @@ footer {
     .contMapa {
         align-self: center;
         iframe {
-            width: 900px;
-            height: 700px;
+            width: 80%;
         }
     }
 }
