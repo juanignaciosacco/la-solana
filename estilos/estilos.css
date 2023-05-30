@@ -87,6 +87,16 @@ i.i {
   margin-top: 150px;
 }
 
+.thumb {
+  width: 80px !important;
+  height: auto !important;
+}
+
+.carousel-indicators {
+  background-color: rgba(206, 206, 206, 0.5);
+  border-radius: 25px;
+}
+
 .textoInformativo {
   background-color: #cecece;
   margin: 2em auto;
@@ -276,18 +286,78 @@ iframe {
   margin-top: 20px;
 }
 
-.carouselImgEventos {
-  margin: 0 auto;
-  height: 800px;
+.linkEventos {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+.linkEventos:hover {
+  color: #797979;
+}
+.linkEventos:active {
+  color: #797979;
+}
+.linkEventos:focus {
+  color: #797979;
+}
+
+.contactoEventos {
+  margin-top: 150px;
+}
+.contactoEventos i {
+  margin-right: 10px;
+}
+
+.txtInfoEventos {
   width: 90%;
+  margin: 0 auto;
+}
+
+.carouselImgEventos {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  margin: 0 auto;
+}
+.carouselImgEventos .thumbnailsEv {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  background-color: rgba(206, 206, 206, 0.5);
+  border-radius: 25px;
+  width: 40%;
+  height: 100px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.carouselImgEventos .thumbnailsEv img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.carouselImgEventos .carouselE {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
-.carouselImgEventos img {
-  margin: 0 auto;
+.carouselImgEventos .carouselE img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.5s ease;
+  position: absolute;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+.carouselImgEventos .carouselE img.active {
+  opacity: 1;
+  z-index: 1;
 }
 
 /* Comienza pagina Suite Sunset */
@@ -384,10 +454,51 @@ footer i {
   .carouselImgEventos {
     width: 100%;
     height: 400px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .carouselImgEventos .thumbnailsEv {
+    position: static;
+    width: auto;
+    height: auto;
+    transform: none;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  .carouselImgEventos .thumbnailsEv img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  .carouselImgEventos .carouselE {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .carouselImgEventos .carouselE img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
+  .carouselImgEventos .carouselE img.active {
+    opacity: 1;
+    z-index: 1;
   }
   .txtInfoEventos {
     width: 90%;
     margin: 0 auto;
+  }
+  .contactoEventos {
+    margin-top: 230px;
   }
   .contactoEventos .txtEventos {
     font-size: 16px;
@@ -465,6 +576,45 @@ footer i {
   .carouselImgEventos {
     width: 90%;
     height: 500px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .carouselImgEventos .thumbnailsEv {
+    position: static;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    transform: none;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  .carouselImgEventos .thumbnailsEv img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  .carouselImgEventos .carouselE {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .carouselImgEventos .carouselE img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
+  .carouselImgEventos .carouselE img.active {
+    opacity: 1;
+    z-index: 1;
   }
   .contactoEventos .txtEventos {
     font-size: 16px;
@@ -509,6 +659,48 @@ footer i {
   .carouselImgEventos {
     width: 90%;
     height: 600px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .carouselImgEventos .thumbnailsEv {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    background-color: rgba(206, 206, 206, 0.5);
+    border-radius: 25px;
+    width: 80%;
+    height: 100px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  .carouselImgEventos .thumbnailsEv img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  .carouselImgEventos .carouselE {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .carouselImgEventos .carouselE img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
+  .carouselImgEventos .carouselE img.active {
+    opacity: 1;
+    z-index: 1;
   }
   /* Pagina historia */
   .texto {
@@ -580,6 +772,53 @@ footer i {
   }
   .contMapa iframe {
     width: 80%;
+  }
+  /* Comienza pagina eventos */
+  .carouselImgEventos {
+    width: 90%;
+    height: 700px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .carouselImgEventos .thumbnailsEv {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    background-color: rgba(206, 206, 206, 0.5);
+    border-radius: 25px;
+    width: 80%;
+    height: 100px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  .carouselImgEventos .thumbnailsEv img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  .carouselImgEventos .carouselE {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .carouselImgEventos .carouselE img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
+  .carouselImgEventos .carouselE img.active {
+    opacity: 1;
+    z-index: 1;
   }
 }
 

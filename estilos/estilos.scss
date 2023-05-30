@@ -14,6 +14,7 @@ $colorRojoTransparente: #b6241fbc;
 $colorGris: #797979;
 $colorGrisClaro: #cecece;
 
+
 * {
     font-family: $fontTxt;
     font-size: 20px;
@@ -101,6 +102,16 @@ i.i {
     margin-top: 150px;
 }
 
+.thumb {
+    width: 80px !important;
+    height: auto !important;
+}
+
+.carousel-indicators {
+    background-color: rgba($color: $colorGrisClaro, $alpha: 0.5);
+    border-radius: 25px;
+}
+
 .textoInformativo {
     background-color: $colorGrisClaro;
     margin: 2em auto;
@@ -141,6 +152,7 @@ i.i {
     height: 700px;
     overflow: hidden;
     position: relative;
+
     img {
       width: 100%;
       height: 100%;
@@ -299,20 +311,79 @@ iframe {
     }
 }
 
-.carouselImgEventos {
-    margin: 0 auto;
-    height: 800px;
-    width: 90%;
-    overflow: hidden;
-    img {
-      margin: 0 auto;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: transform 0.5s ease;
+.linkEventos {
+    text-decoration: none;
+    font-family: $fontTxt;
+    color: black;
+    &:hover {
+        color: $colorGris;
     }
-  }
+    &:active {
+        color: $colorGris;
+    }
+    &:focus {
+        color: $colorGris;
+    }
+}
 
+.contactoEventos {
+    margin-top: 150px;
+    i {
+        margin-right: 10px;
+    }
+}
+
+.txtInfoEventos {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.carouselImgEventos {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    margin: 0 auto;
+    .thumbnailsEv {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        background-color: rgba($color: $colorGrisClaro, $alpha: 0.5);
+        border-radius: 25px;
+        width: 40%;
+        height: 100px;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        img {
+          width: 80px;
+          height: 80px;
+          object-fit: cover;
+          cursor: pointer;
+          margin: 0 5px;
+        }
+    }
+    .carouselE {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          position: absolute;
+          transition: opacity 0.5s ease;
+          opacity: 0;
+        }
+        img.active {
+          opacity: 1;
+          z-index: 1;
+        }
+      }
+  }
 
 /* Comienza pagina Suite Sunset */
 
@@ -423,7 +494,45 @@ footer {
     .carouselImgEventos {
         width: 100%;
         height: 400px;
-    }
+        position: relative;
+        margin: 0 auto;
+        .thumbnailsEv {
+            position: static;
+            width: auto;
+            height: auto;
+            transform: none;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            img {
+              width: 80px;
+              height: 80px;
+              object-fit: cover;
+              cursor: pointer;
+              margin: 0 5px;
+            }
+        }
+        .carouselE {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              position: absolute;
+              transition: opacity 0.5s ease;
+              opacity: 0;
+            }
+            img.active {
+              opacity: 1;
+              z-index: 1;
+            }
+          }
+      }
 
     .txtInfoEventos {
         width: 90%;
@@ -431,6 +540,7 @@ footer {
     }
     
     .contactoEventos {
+        margin-top: 230px;
         .txtEventos {
             font-size: 16px;
             text-align: center;
@@ -529,11 +639,51 @@ footer {
         width: 350px;
         margin: 0 auto;
     }
-    
+
     .carouselImgEventos {
         width: 90%;
         height: 500px;
-    }
+        position: relative;
+        margin: 0 auto;
+        .thumbnailsEv {
+            position: static;
+            width: auto;
+            height: auto;
+            margin-top: 10px;
+            transform: none;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            img {
+              width: 80px;
+              height: 80px;
+              object-fit: cover;
+              cursor: pointer;
+              margin: 0 5px;
+            }
+        }
+        .carouselE {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              position: absolute;
+              transition: opacity 0.5s ease;
+              opacity: 0;
+            }
+            img.active {
+              opacity: 1;
+              z-index: 1;
+            }
+          }
+      }
+
     
     .contactoEventos {
         .txtEventos {
@@ -594,7 +744,49 @@ footer {
     .carouselImgEventos {
         width: 90%;
         height: 600px;
-    }
+        position: relative;
+        margin: 0 auto;
+        .thumbnailsEv {
+            position: absolute;
+            bottom: 8%;
+            left: 50%;
+            background-color: rgba($color: $colorGrisClaro, $alpha: 0.5);
+            border-radius: 25px;
+            width: 80%;
+            height: 100px;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            img {
+              width: 80px;
+              height: 80px;
+              object-fit: cover;
+              cursor: pointer;
+              margin: 0 5px;
+            }
+        }
+        .carouselE {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              position: absolute;
+              transition: opacity 0.5s ease;
+              opacity: 0;
+            }
+            img.active {
+              opacity: 1;
+              z-index: 1;
+            }
+          }
+      }
 
     /* Pagina historia */
 
@@ -625,7 +817,6 @@ footer {
         }
     }
 }
-
 
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
 
@@ -675,9 +866,9 @@ footer {
         }
       }
 
-      /* Comeinza La casa */
+    /* Comeinza La casa */
 
-      .imgLaCasa {
+    .imgLaCasa {
         width: 100%;
         margin: 0 auto;
     }
@@ -690,4 +881,53 @@ footer {
             width: 80%;
         }
     }
+
+    /* Comienza pagina eventos */
+
+    .carouselImgEventos {
+        width: 90%;
+        height: 700px;
+        position: relative;
+        margin: 0 auto;
+        .thumbnailsEv {
+            position: absolute;
+            bottom: 8%;
+            left: 50%;
+            background-color: rgba($color: $colorGrisClaro, $alpha: 0.5);
+            border-radius: 25px;
+            width: 80%;
+            height: 100px;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            img {
+              width: 80px;
+              height: 80px;
+              object-fit: cover;
+              cursor: pointer;
+              margin: 0 5px;
+            }
+        }
+        .carouselE {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              position: absolute;
+              transition: opacity 0.5s ease;
+              opacity: 0;
+            }
+            img.active {
+              opacity: 1;
+              z-index: 1;
+            }
+          }
+      }
 }

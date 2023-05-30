@@ -24,22 +24,32 @@ carousels.forEach((carousel) => {
   showImage(currentIndex);
 
   // Cambiar a la siguiente imagen cada 2 segundos (2000 milisegundos)
-  setInterval(nextImage, 3000);
+  setInterval(nextImage, 4000);
 });
 
-// Pagin eventos
+
+
+// Pagina eventos
 
 const carouselEventos = document.querySelector('.carouselImgEventos');
-const imagesEvent = carouselEventos.querySelectorAll('img');
-const totalImagesEvent = imagesEvent.length;
+const thumbnails = carouselEventos.querySelector('.thumbnailsEv');
+const carouselImages = carouselEventos.querySelector('.carouselE').querySelectorAll('img');
+const totalImagesEvent = carouselImages.length;
 let currentIndexEventos = 0;
 
+thumbnails.addEventListener('click', (event) => {
+  if (event.target.tagName === 'IMG') {
+    const thumbnailIndex = Array.from(thumbnails.children).indexOf(event.target);
+    showImageEventos(thumbnailIndex);
+  }
+});
+
 function showImageEventos(index) {
-  imagesEvent.forEach((image, i) => {
+  carouselImages.forEach((image, i) => {
     if (i === index) {
-      image.style.display = 'block';
+      image.classList.add('active');
     } else {
-      image.style.display = 'none';
+      image.classList.remove('active');
     }
   });
 }
@@ -49,6 +59,7 @@ function nextImageEventos() {
   showImageEventos(currentIndexEventos);
 }
 
-setInterval(nextImageEventos, 3000); // Cambia la imagen cada 2 segundos (2000 milisegundos)
+setInterval(nextImageEventos, 3000);
 
 showImageEventos(currentIndexEventos);
+
