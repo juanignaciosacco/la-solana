@@ -474,7 +474,7 @@ footer i {
     height: 80px;
     object-fit: cover;
     cursor: pointer;
-    margin: 0 5px;
+    margin: 10px 5px;
   }
   .carouselImgEventos .carouselE {
     width: 100%;
@@ -616,6 +616,9 @@ footer i {
     opacity: 1;
     z-index: 1;
   }
+  .contactoEventos {
+    margin-top: 200px;
+  }
   .contactoEventos .txtEventos {
     font-size: 16px;
     text-align: center;
@@ -657,18 +660,18 @@ footer i {
     width: 100%;
   }
   .carouselImgEventos {
-    width: 90%;
+    width: 100%;
     height: 600px;
     position: relative;
     margin: 0 auto;
   }
   .carouselImgEventos .thumbnailsEv {
     position: absolute;
-    bottom: 8%;
+    bottom: 1%;
     left: 50%;
     background-color: rgba(206, 206, 206, 0.5);
     border-radius: 25px;
-    width: 80%;
+    width: 100%;
     height: 100px;
     transform: translateX(-50%);
     display: flex;
@@ -693,7 +696,7 @@ footer i {
   .carouselImgEventos .carouselE img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     position: absolute;
     transition: opacity 0.5s ease;
     opacity: 0;
@@ -775,18 +778,18 @@ footer i {
   }
   /* Comienza pagina eventos */
   .carouselImgEventos {
-    width: 90%;
+    width: 100%;
     height: 700px;
     position: relative;
     margin: 0 auto;
   }
   .carouselImgEventos .thumbnailsEv {
     position: absolute;
-    bottom: 8%;
+    bottom: 2%;
     left: 50%;
     background-color: rgba(206, 206, 206, 0.5);
     border-radius: 25px;
-    width: 80%;
+    width: 100%;
     height: 100px;
     transform: translateX(-50%);
     display: flex;
@@ -811,7 +814,7 @@ footer i {
   .carouselImgEventos .carouselE img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     position: absolute;
     transition: opacity 0.5s ease;
     opacity: 0;
